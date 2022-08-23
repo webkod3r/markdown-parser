@@ -11,7 +11,7 @@ abstract class HtmlContainerElement extends HtmlElement implements Nestable
      *
      * @var HtmlElement[]
      */
-    private array $children;
+    protected array $children;
     
     /**
      * List of nodes contained in current node

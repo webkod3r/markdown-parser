@@ -5,11 +5,13 @@ declare(strict_types=1);
 
 require __DIR__ . '/../src/bootstrap.php';
 
+use MarkdownParser\Command\LoadMarkDownCommand;
 use Symfony\Component\Console\Application;
 
 $application = new Application();
 
 // ... register commands
+$application->add(new LoadMarkDownCommand());
 // ...
 
 $application->run();
