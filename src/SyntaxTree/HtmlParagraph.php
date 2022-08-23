@@ -15,4 +15,11 @@ class HtmlParagraph extends HtmlContainerElement
         $this->children = [];
     }
 
+    /**
+     * Accepts the visitor to process node
+     */
+    public function accept(MarkdownVisitor $visitor): string
+    {
+        return $visitor->visitParagraph($this);
+    }
 }

@@ -29,4 +29,12 @@ class HtmlText extends HtmlElement
     {
         return $this->text;
     }
+
+    /**
+     * Accepts the visitor to process node
+     */
+    public function accept(MarkdownVisitor $visitor): string
+    {
+        return $visitor->visitText($this);
+    }
 }

@@ -39,4 +39,12 @@ class HtmlHeader extends HtmlContainerElement
     {
         return $this->level;
     }
+
+    /**
+     * Accepts the visitor to process node
+     */
+    public function accept(MarkdownVisitor $visitor): string
+    {
+        return $visitor->visitHeading($this);
+    }
 }

@@ -14,4 +14,11 @@ class HtmlLineBreak extends HtmlElement
         $this->tag = 'br';
     }
 
+    /**
+     * Accepts the visitor to process node
+     */
+    public function accept(MarkdownVisitor $visitor): string
+    {
+        return $visitor->visitLineBreak($this);
+    }
 }
